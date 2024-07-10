@@ -5,21 +5,19 @@ class Peon(Pieza):
         super().__init__(color, nombre, fila, columna)
 
 
-def movimiento (self,fila, columna):
-    if self.columna == columna:
-        if self.fila == 2:
-            if fila == self.fila + 1 or fila == self.fila + 2:
-               self.fila = fila
-               print(f"Peón movido a la posición ({fila}, {columna})")
+    def movimiento (self,fila, columna):
+        if self.columna == columna:
+            if self.fila == 2:
+                if fila == self.fila + 1 or fila == self.fila + 2:
+                    self.fila = fila
+                    print(f"Peón movido a la posición ({fila}, {columna})")
             else:
-                 print("Movimiento inválido")
+                print("Movimiento inválido")
         else:  # Movimiento regular
-             if fila == self.fila + 1:
-                        self.fila = fila
-                        print(f"Peón movido a la posición ({fila}, {columna})")
-             else:
-                 print("Movimiento inválido")
+            if fila == self.fila + 1:
+                self.fila = fila
+                print(f"Peón movido a la posición ({fila}, {columna})")
+            else:
+                print("Movimiento inválido")
                  
-peon1 = Peon("blanco", "peon1", 3, 2)
 
-        
